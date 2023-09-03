@@ -1,0 +1,26 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 300px;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid gray;
+    margin-top: 1rem;
+}
+
+div, p, h1 {
+    text-align: center;
+}
+
+input, select {
+    margin-top: 0.5rem;
+}
+
+h1 {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid gray;
+}
+
+div {
+    padding-top: 1rem;
+    border-top: 1px solid gray;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Calculadora</title>
+
+    <link href="style.css" rel="stylesheet">
+    
+    <style>
+
+      .invalid {
+        color: red;
+        font-weight: bold;
+        font-family: 'Courier New', Courier, monospace;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <header><h1>Calculadora</h1></header>
+
+    <section>
+      <p>
+        <input
+          id="inputNumero1"
+          type="text"
+          placeholder="Número 1"
+          onchange="setNumero1(this); enableCalc(); enableClear();"
+          onblur="validaNumero(this)"
+        />
+      </p>
+
+      <p>
+        <input
+          id="inputNumero2"
+          type="text"
+          placeholder="Número 2"
+          onchange="setNumero2(this); enableCalc(); enableClear();"
+          onblur="validaNumero(this)"
+        />
+      </p>
+
+      <p>
+        <select onchange="setOperacao(this); enableClear()" id="selectOperacao"> <!--swelect>option*4 -->
+          <option value="+" selected>Soma</option>
+          <option value="-">Subtração</option>
+          <option value="*">Multiplicação</option>
+          <option value="/">Divisão</option>
+        </select>
+      </p>
+
+      <p>
+        <button id="calcular" onclick="calcular()" disabled>Calcular</button>
+        <button id="limpar" disabled>Limpar</button> <!--página JS tivesse um ID e a partir disso, fazer todas as operações-->
+      </p>
+
+      <p class="hidden">Resultado: <span id="spanResultado"></span></p>
+
+    </section>
+
+    <script src="calcular.js"></script>
+    <script src="limpar.js"></script>
+
+  </body>
+  
+</html>
